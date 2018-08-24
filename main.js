@@ -107,7 +107,6 @@ function initMap() {
             })(marker, capitalIndex));
         }
         winningCity = cities[Math.floor(Math.random() * cities.length)];
-        console.log(winningCity);
         getFlickr(winningCity.longitude,winningCity.latitude,'city');
         getFlickr(winningCity.longitude,winningCity.latitude,'food',false);
         makeRequestForWeather(winningCity);
