@@ -35,11 +35,8 @@
 
     <div class="container-fluid">
         <!--https://getbootstrap.com/docs/4.0/components/carousel/-->
-        <div class="row">
-            <div class="postcard col-lg-4">
-                <img class="image-size" src="./images/airmail.png" alt="postcard" >
-            </div>
-            <div id="carouselFlickr" class="carousel slide col-xs-12 offset-md-2 col-md-8 offset-lg-0 col-lg-4" data-ride="carousel" data-interval="2000">
+        <div class="row center">
+            <div id="carouselFlickr" class="carousel slide col-xs-12 offset-col-xs-6 col-md-8 offset-col-md-3 col-lg-4 offset-col-lg-2" data-ride="carousel" data-interval="2000">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carouselFlickr" data-slide-to="0" class="active"></li>
@@ -48,7 +45,7 @@
                     <li data-target="#carouselFlickr" data-slide-to="3"></li>
                 </ol>
                 <!-- Wrapper for slides -->
-                <div class="row">
+                <div class="row ">
                     <div class="carousel-inner">
                         <div class="carousel-item active center">
                             <img class="image-size " id='pic0' alt="Pic 0" >
@@ -73,8 +70,13 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div class="postcard col-lg-4">
-                <img class="image-size" src="./images/airmail.png" alt="postcard" >
+            <div class="weather-bg col-sm-12">
+                <span class="weather-text"></span>
+            </div>
+            <div class="answers">
+                <button class="col-sm-12 col-md-4 button-text btn btn-warning button0">City 1</button>
+                <button class="col-sm-12 col-md-4 button-text btn btn-warning button1">City 2</button>
+                <button class="col-sm-12 col-md-4 button-text btn btn-warning button2">City 3</button>
             </div>
         </div>
     </div>
@@ -99,9 +101,6 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyfIduFunZW6fxzeuOL_STv1Ts66ZurOI&callback=initMap"
         type="text/javascript"></script>
     </div>
-
-
-    <div class="plane"></div>
 
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" id="modalContent">
@@ -141,6 +140,20 @@
             <!--<i class="material-icons">volume_off</i>-->
             <i class="material-icons">volume_up</i>
         </button>
+    </div>
+
+        <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+             <div class="plane"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </div>
 
 </body>

@@ -34,9 +34,9 @@ body {
     font-weight: bolder;
 }
 
-.center {
+/* .center {
     justify-content: center;
-}
+} */
 
 .description-text {
     font-size: 1em;
@@ -50,16 +50,19 @@ body {
     width: 100%;
 }
 
-.postcard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#carouselFlickr {
+    display: inline-block;
+}
+
+#carousel-inner {
+    display: inline-block;
 }
 
 .weather-bg {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    display: inline-block;
 }
 
 .weather-text {
@@ -87,22 +90,6 @@ body {
     width: 80%;
     border-radius: 10px;
     border: 2px solid darkgoldenrod;
-}
-
-.plane{
-    position: fixed;
-    height: 20vh;
-    width: 20vw;
-    background-image: url("images/Plane_9_transparent_background.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: flyPlane 3s;
-}
-
-@keyframes flyPlane {
-    0%      {right:0;bottom:0;transform: scale(1,1);}
-    50%     {right:35vw;bottom:40vh;transform: scale(4,4);}
-    100%    {right:110vw;bottom:120vh;transform: scale(1,1);}
 }
 
 .wikipedia-section {
@@ -146,7 +133,7 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
     /*background-image: url("images/Cup-Noodles.jpg"); */
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 769px) {
     /* For mobile phones: 768,992 */
     .header-photo {
         display: none;
@@ -161,4 +148,47 @@ div#nomNomPics0, div#nomNomPics1, div#nomNomPics2, div#nomNomPics3 {
         top: 0;
         right: 1em;
     }
+}
+
+/* ===================================================================
+ * # preloader
+ *
+ * ------------------------------------------------------------------- */
+ #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #87cefa;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.no-js #preloader, .oldie #preloader {
+    display: none;
+}
+
+#loader {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.plane{
+    position: fixed;
+    height: 20vh;
+    width: 20vw;
+    background-image: url("images/Plane_9_transparent_background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: flyPlane 3s;
+}
+
+@keyframes flyPlane {
+    0%      {right:0;bottom:0;transform: scale(1,1);}
+    50%     {right:35vw;bottom:40vh;transform: scale(4,4);}
+    100%    {right:110vw;bottom:120vh;transform: scale(1,1);}
 }
